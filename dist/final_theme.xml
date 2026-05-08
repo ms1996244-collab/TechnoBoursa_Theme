@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+    <title><data:blog.pageTitle/></title>
+    <b:skin><![CDATA[
+        :root {
+    --bg-primary: #0B0C10;
+    --bg-secondary: #1F2833;
+    --text-primary: #C0C0C0;
+    --text-secondary: #FFFFFF;
+    --accent-gold: #D4AF37;
+    --accent-gold-hover: #F3E5AB;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+.custom-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: var(--bg-primary);
+    border-bottom: 2px solid var(--accent-gold);
+}
+
+.brand-title {
+    color: var(--accent-gold);
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--accent-gold);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.urgent-btn {
+    background: var(--accent-gold);
+    color: var(--bg-primary) !important;
+    padding: 5px 15px;
+    border-radius: 4px;
+}
+    ]]></b:skin>
+</head>
+<body>
+    <header id='header-wrapper'>
+        <div class="custom-header-container">
+    <div class="logo-area">
+        <a href="/" class="brand-link">
+            <h1 class="brand-title">TechnoBoursa <span>تكنو بورصة</span></h1>
+            <p style="color: var(--text-primary); font-size: 12px;">رؤية تقنية بلمسة استثمارية</p>
+        </a>
+    </div>
+    <nav class="main-navigation">
+        <ul class="nav-links">
+            <li><a href="/search/label/أسواق المال">📊 الأسواق</a></li>
+            <li><a href="/search/label/عالم التقنية">💻 تقنية</a></li>
+            <li><a href="/search/label/عاجل" class="urgent-btn">🔔 عاجل</a></li>
+        </ul>
+    </nav>
+</div>
+        <b:section class='header-b' id='header-b' maxwidgets='1' showaddelement='no'>
+            <b:widget id='Header1' locked='true' title='TechnoBoursa (Header)' type='Header'/>
+        </b:section>
+    </header>
+
+    <main id='main-wrapper' style="padding: 20px 5%; min-height: 50vh;">
+        <b:section class='main' id='main' showaddelement='yes'>
+            <b:widget id='Blog1' locked='true' title='مشاركات المدونة' type='Blog'/>
+        </b:section>
+    </main>
+
+    <footer id='footer-wrapper'>
+        <div
+    style="background: var(--bg-secondary); padding: 30px; text-align: center; border-top: 1px solid var(--accent-gold);">
+    <h3 style="color: var(--accent-gold);">TechnoBoursa | تكنو بورصة</h3>
+    <p style="font-size: 14px;">جميع الحقوق محفوظة &copy; 2026</p>
+</div>
+        <b:section class='footer-b' id='footer-b' showaddelement='no'/>
+    </footer>
+</body>
+</html>

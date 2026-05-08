@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+    <title><data:blog.pageTitle/></title>
+    <b:skin><![CDATA[
+        /* CSS_HOLDER */
+    ]]></b:skin>
+</head>
+<body>
+    <header id='header-wrapper'>
+        <!-- HEADER_HOLDER -->
+        <b:section class='header-b' id='header-b' maxwidgets='1' showaddelement='no'>
+            <b:widget id='Header1' locked='true' title='TechnoBoursa (Header)' type='Header'/>
+        </b:section>
+    </header>
+
+    <main id='main-wrapper' style="padding: 20px 5%; min-height: 50vh;">
+        <b:section class='main' id='main' showaddelement='yes'>
+            <b:widget id='Blog1' locked='true' title='مشاركات المدونة' type='Blog'/>
+        </b:section>
+    </main>
+
+    <footer id='footer-wrapper'>
+        <!-- FOOTER_HOLDER -->
+        <b:section class='footer-b' id='footer-b' showaddelement='no'/>
+    </footer>
+</body>
+</html>
