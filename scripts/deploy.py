@@ -3,7 +3,7 @@ from googleapiclient.discovery import build
 from google.oauth2.credentials import Credentials
 
 def deploy():
-    print("🚀 جاري بدء عملية فحص الاتصال بالمدونة...")
+    print("🚀 جاري بدء عملية الاتصال بمدونة تكنو بورصة...")
     
     # جلب البيانات من بيئة GitHub
     blog_id = os.environ.get('BLOG_ID')
@@ -21,11 +21,10 @@ def deploy():
 
     try:
         service = build('blogger', 'v3', credentials=creds)
-        
-        # جلب معلومات المدونة للتأكد من نجاح الاتصال
+        # اختبار الاتصال عبر جلب معلومات المدونة
         blog = service.blogs().get(blogId=blog_id).execute()
         print(f"✅ تم الاتصال بنجاح بمدونة: {blog['name']}")
-        print("💡 ملاحظة: رفع قالب XML كاملاً غير مدعوم عبر API حالياً، سيتم تحديث الوصف كاختبار.")
+        print(f"🔗 الرابط الحالي: {blog['url']}")
         
     except Exception as e:
         print(f"❌ حدث خطأ أثناء الاتصال: {e}")
