@@ -1,23 +1,31 @@
 name: Deploy TechnoBoursa Theme
+
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout Code
+        uses: actions/checkout@v4  # تحديث للإصدار 4
+
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5  # تحديث للإصدار 5
         with:
-          python-version: '3.x'
-      - name: Build and Push
+          python-level: '3.10'
+
+      - name: Install Dependencies
+        run: |
+          pip install google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client
+
+      - name: Build and Deploy
         env:
           BLOG_ID: ${{ secrets.BLOG_ID }}
           GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
           GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
           GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
         run: |
-          pip install google-api-python-client google-auth
-          python scripts/build.py
-          python scripts/push_theme.py
+          python scripts/deploy.py
