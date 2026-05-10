@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v4  # تحديث للإصدار 4
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v5  # تحديث للإصدار 5
+        uses: actions/setup-python@v5
         with:
-          python-level: '3.10'
+          python-version: '3.10' # تم تصحيح الكلمة هنا من level إلى version
 
       - name: Install Dependencies
         run: |
